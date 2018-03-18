@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bé tập tính</title>
+        <script type="text/javascript" src="js/script.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+    </head>
+    <body>
+        <h1>BÉ TẬP TÍNH</h1>
+        <table>
+            <tr>
+                <td width="20%">Số thứ nhất</td>
+                <td><input type="number" id="sothunhat" onblur="checkTextField(this);" onchange="clearResult()"></td>
+                <td width="15%"><input type="radio" name="toantu" value="cong" checked onchange="clearResult()"> Cộng<br></td>
+                <td width="15%"><input type="radio" name="toantu" value="tru" onchange="clearResult()"> Trừ<br></td>
+            </tr>
+            <tr>
+                <td>Số thứ hai</td>
+                <td><input type="number" id="sothuhai" onblur="checkTextField(this);" onchange="clearResult()"></td>
+                <td><input type="radio" name="toantu" value="nhan" onchange="clearResult()"> Nhân<br></td>
+                <td><input type="radio" name="toantu" value="chia" onchange="clearResult()"> Chia<br></td>
+            </tr>
+            <tr>
+                <td>Kết quả</td>
+                <td><input type="number" id="ketqua" disabled></td>
+                <td><button type="button" onclick=calculate()>Tính</button></td>
+            </tr>
+            <tr>
+                <td>Thông báo</td>
+                <td colspan="3" id="thongbao"></td>
+            </tr>
+        </table>
+    </body>
+</html>
